@@ -1,8 +1,21 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Qwitcher+Grypen:wght@700&family=Space+Mono&display=swap');
+.header {
+  background-color: #DCD7C9;
 }
-
-.App-logo {
+.navbar-brand{
+  font-family: 'Dancing Script', cursive;
+  font-size: 35px;
+  /* font-family: 'Qwitcher Grypen', cursive; */
+}
+.nav-item{
+  font-family: 'Space Mono', monospace;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+#navbarNav a:hover{
+  color: #A27B5C;
+}
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +48,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
