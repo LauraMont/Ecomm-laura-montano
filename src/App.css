@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Qwitcher+Grypen:wght@700&family=Space+Mono&display=swap');
+
+/* Paleta de colores : https://colorhunt.co/palette/2c36393f4e4fa27b5cdcd7c9 */
 .header {
-  background-color: #DCD7C9;
+  background-color: #dcd7c9;
 }
 .navbar-brand{
   font-family: 'Dancing Script', cursive;
@@ -11,41 +13,21 @@
   font-family: 'Space Mono', monospace;
   padding-left: 2rem;
   padding-right: 2rem;
+  color: #3F4E4F;
 }
-#navbarNav a:hover{
+#navbarNav a:hover,
+.react-icons:hover{
   color: #A27B5C;
 }
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.react-icons{
+  height: 1.5rem;
+  width: auto;
+  color: #2C3639
+}
+main{
+  background-color: #2C3639; 
+  height: 100vh;
+  color : #dcd7c9;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
