@@ -20,14 +20,43 @@
   color: #A27B5C;
 }
 
-.react-icons{
+.react-icons {
   height: 1.5rem;
   width: auto;
   color: #2C3639
 }
+
 main{
   background-color: #2C3639; 
   height: 100vh;
   color : #dcd7c9;
 }
-
+.AddButtons{
+  width: 10rem;
+}
+  .Buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border-style: solid;
+    border-color: #dcd7c9;
+    border-radius: 15px 15px 15px 15px;
+  }
+  .pdpBtns{
+    height: 1.5rem;
+    width: auto;
+    color: #dcd7c9;
+  }
+  .pdpBtns:hover{
+    color: #A27B5C;
+  }
+  .btn  {
+    background-color: #dcd7c9;
+  }
+  .btn:hover{
+    background-color: #A27B5C;
+    color: #2C3639;
+  }
+  .Buttons span{
+    color: #dcd7c9;
+  }
