@@ -4,18 +4,15 @@ import { useState } from "react";
 const ItemCount = ({stock,initial, onAdd})=>{
     const [rate,setRate]= useState(parseInt(initial));//hook
     const HandlerAdd = ()=> {
-        if(rate<stock){
-            setRate(rate+1);
-        }
+        rate<stock && setRate(rate +1);
     }
     const HandlerRest = ()=> {
-        if(rate > 0 ){
-            setRate(rate-1);
-        }
+        rate>initial && setRate(rate -1);
+        
     }
     
     return(
-        <div className="AddButtons d-flex flex-column align-items-center mx-5">
+        <div className="AddButtons d-flex flex-column align-items-center m-5">
             <p>Add product-PDP</p>
             <div className="Buttons my-1 py-1">
                 <a href="#" onClick={()=>{HandlerRest()}}><FiMinus className="pdpBtns"/></a>

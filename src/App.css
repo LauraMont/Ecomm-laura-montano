@@ -4,6 +4,9 @@
 .header {
   background-color: #dcd7c9;
 }
+.mono-text{
+  font-family: 'Space Mono', monospace;
+}
 .navbar-brand{
   font-family: 'Dancing Script', cursive;
   font-size: 35px;
@@ -15,6 +18,7 @@
   padding-right: 2rem;
   color: #3F4E4F;
 }
+
 #navbarNav a:hover,
 .react-icons:hover{
   color: #A27B5C;
@@ -28,7 +32,6 @@
 
 main{
   background-color: #2C3639; 
-  height: 100vh;
   color : #dcd7c9;
 }
 .AddButtons{
@@ -52,11 +55,90 @@ main{
   }
   .btn  {
     background-color: #dcd7c9;
+    color: #2C3639;
   }
-  .btn:hover{
+  .btn:hover,
+  .circle:hover{
     background-color: #A27B5C;
     color: #2C3639;
   }
   .Buttons span{
     color: #dcd7c9;
   }
+  .circle {
+    width: 1.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    border-radius: 50%;
+    font-size: 1rem;
+    text-align: center;
+    background: #2C3639;
+    
+  }
+  #circle-content {
+    text-decoration: none !important;
+    color: #dcd7c9;
+    list-style: none;
+  }
+/* Card style */
+.cardProduct{
+  width:15rem;
+  height: auto;
+}
+.container {
+  position: relative;
+  width:15rem;
+  height: auto;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: start;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #dcd7c986;
+  color: black;
+  font-size: 16px;
+  padding: 5px ;
+  margin : 15px 20px;
+}
+.text a:hover{
+  color: #dcd7c9;
+}
+.text a{
+  color: black;
+}
+section{
+	display: flex;
+    flex-wrap : wrap;
+}
+.iconBooks{
+  width: 1.5rem;
+  height: auto;
+  color: black;
+}
+
