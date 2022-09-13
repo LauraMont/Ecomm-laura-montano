@@ -9,7 +9,8 @@ const data = [
         "fisicBook":true,
         "price":20,
         "stock":100,
-        "img":"https://i.ibb.co/NmrW64r/D-NQ-NP-825469-MLA42620517705-072020-O.webp"
+        "img":"https://i.ibb.co/NmrW64r/D-NQ-NP-825469-MLA42620517705-072020-O.webp",
+        categoria : "RMCollection"
     },
     {
         "id":56,

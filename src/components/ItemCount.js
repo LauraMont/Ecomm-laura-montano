@@ -12,8 +12,7 @@ const ItemCount = ({stock,initial, onAdd})=>{
     }
     
     return(
-        <div className="AddButtons d-flex flex-column align-items-center m-5">
-            <p>Add product-PDP</p>
+        <div className="AddButtons d-flex flex-column align-items-center m-3">
             <div className="Buttons my-1 py-1">
                 <a href="#" onClick={()=>{HandlerRest()}}><FiMinus className="pdpBtns"/></a>
                 <span>{rate}</span>

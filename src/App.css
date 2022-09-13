@@ -140,5 +140,16 @@ section{
   width: 1.5rem;
   height: auto;
   color: black;
+  font-family: 'Space Mono', monospace;
+}
+.pdpImage{
+  width: 30rem;
+  height: auto;
+  border: solid 2rem #dcd7c9;
+}
+.iconsPDP{
+  background-color: #3F4E4F;
+  width: fit-content;
+  color: #dcd7c9;
 }
 

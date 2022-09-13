@@ -1,5 +1,5 @@
 import CartWidget from '../components/CartWidget';
-
+import { Link } from 'react-router-dom';
 const NavBar = ()=>{
     return(
         <header className='header'>
@@ -12,16 +12,16 @@ const NavBar = ()=>{
                 <div className="collapse navbar-collapse justify-content-around" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="#">RM Collection</a>
+                            <Link className="nav-link active" to='/RMCollection'>RM Collection</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link active" href="#">Novels</a>
+                        <Link className="nav-link active" to='/Novels'>Novels</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link active" href="#">Clasics</a>
+                        <Link className="nav-link active" to='/Clasics'>Clasics</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link active" href="#">Movies based in them</a>
+                        <Link className="nav-link active" to='/MoviesBasedInThem'>Movies based in them</Link>
                         </li>
                     </ul>
                     <div>
