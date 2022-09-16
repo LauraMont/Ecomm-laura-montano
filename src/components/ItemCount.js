@@ -14,9 +14,9 @@ const ItemCount = ({stock,initial, onAdd})=>{
     return(
         <div className="AddButtons d-flex flex-column align-items-center m-3">
             <div className="Buttons my-1 py-1">
-                <a href="#" onClick={()=>{HandlerRest()}}><FiMinus className="pdpBtns"/></a>
+                <a  onClick={()=>{HandlerRest()}}><FiMinus className="pdpBtns "/></a>
                 <span>{rate}</span>
-                <a href="#" onClick={()=>{HandlerAdd()}}><FiPlus className="pdpBtns"/></a>
+                <a  onClick={()=>{HandlerAdd()}}><FiPlus className="pdpBtns"/></a>
             </div>
             <div >
                 <button type="button" className="btn py-0 " onClick={()=>{onAdd(rate)}}>Add to cart!</button>

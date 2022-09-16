@@ -52,6 +52,8 @@ main{
   }
   .pdpBtns:hover{
     color: #A27B5C;
+    cursor: pointer;
+
   }
   .btn  {
     background-color: #dcd7c9;
@@ -143,7 +145,7 @@ section{
   font-family: 'Space Mono', monospace;
 }
 .pdpImage{
-  width: 30rem;
+  width: 20rem;
   height: auto;
   border: solid 2rem #dcd7c9;
 }

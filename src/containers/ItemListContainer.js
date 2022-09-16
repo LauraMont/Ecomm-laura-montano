@@ -1,32 +1,30 @@
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import ItemCount from '../components/ItemCount';
 import customFetch from '../utils/customFetch';
 import ItemList from './ItemList'
 
-const HandlerAddProducts = (rate)=>{
-    if(rate > 0 ){
-        alert(`se agregaron ${rate} al carrito`)
-    }
-}
-
 const ItemListContainer= ()=>{
     const [data,setData]=useState([]);
-    //ComponentDidMount
-    useEffect(()=>{ //hook en react ,este gestiona el inicio de vida del componente
-        customFetch()
-        .then(result=> setData(result))
-        .catch(err=> console.log(err))
-    }, [])
+    const {id} = useParams();
+    useEffect(()=>{ 
+        if(id){
+            //muestra los productos de la categoria id
+            customFetch()
+                .then(result=> setData(result.filter(item=> item.category == id)))
+                .catch(err=> console.log(err))
+        }else{ //id=undefined
+            //muestra todos los productos
+            customFetch()
+                .then(result=> setData(result))
+                .catch(err=> console.log(err))
+        }
+    }, [id])
     return(
         <main>
             <h2 className="text-center p-5 mono-text">Product List Page</h2>
             <ItemList 
                 items={data} 
-            />
-            <ItemCount 
-                stock="20" 
-                initial ="1" 
-                onAdd={HandlerAddProducts}
             />
         </main>
     )

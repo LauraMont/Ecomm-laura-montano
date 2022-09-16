@@ -1,23 +1,24 @@
 import { FiBook , FiBookOpen,FiClipboard ,FiTag} from "react-icons/fi";
-
-
+import { Link } from 'react-router-dom';
 
 const Item = ({id,title,author,ebook,fisicBook, price,img})=>{
     let ebookClass ,fisicBookClass ;
     //Se definen si los iconos de ebook o book aparecen segun disponibilidad del libro (ebook:version digital , book:version fisica)
     ebook ? ebookClass = "text mono-text": ebookClass ="d-none";
     fisicBook ? fisicBookClass = "text mono-text": fisicBookClass ="d-none";
+    
+    let link = `/detail/${id}`
     return (
-        <div className="cardProduct mx-5">
+        <div className="cardProduct mx-5 mb-5">
             <div className="container">
                 <a >
                     <img className="image" src={img} border="0"/>
                 </a>
                 <div className="middle">
                     <div className="text mono-text">
-                        <a className="text-decoration-none " href="#">
+                        <Link to={link} className="text-decoration-none " >
                             <FiClipboard className="iconBooks"/> Details
-                        </a>
+                        </Link>
                     </div>
                     <div className={ebookClass}>
                         <FiBook className="iconBooks"/> EBook

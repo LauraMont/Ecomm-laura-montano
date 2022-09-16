@@ -12,8 +12,10 @@ function App() {
             <Router>
                 <NavBar />
                 <Routes>
-                    <Route exact path='/' element ={<ItemDetailContainer/>}/>
-                    <Route path='categoy/:RMCollection' element ={<ItemDetailContainer/>}/>
+                    <Route exact path='/' element ={<ItemListContainer/>}/>
+                    <Route exact path='/Home' element ={<ItemListContainer/>}/>
+                    <Route exact path='category/:id' element ={<ItemListContainer/>}/>
+                    <Route exact path='detail/:id' element ={<ItemDetailContainer/>}/>
                     //varia el texto con :
                 </Routes>
                 

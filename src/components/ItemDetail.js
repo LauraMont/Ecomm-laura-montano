@@ -1,6 +1,10 @@
 import { FiBook , FiBookOpen,FiClipboard ,FiTag , FiShoppingBag} from "react-icons/fi";
 import ItemCount from "./ItemCount";
 
+const Handler = (count)=>{
+    alert(`${count} products are added to your shopping cart`)
+}
+
 const ItemDetail = ({item})=>{
     //PDP de un libro 
     return(
@@ -11,7 +15,7 @@ const ItemDetail = ({item})=>{
             <div className="PdpBody col ms-5">
                 <h2 className="mono-text"><strong>{item.title}</strong></h2>
                 <p className="mono-text">{item.author}</p>
-                <p className="mono-text fs-5">{item.description}</p>
+                <p className="mono-text fs-6">{item.description}</p>
                 <div className=" iconsPDP mt-5 p-1 d-flex align-items-center">
                     <FiBook className="iconBooks "/> <strong className="ps-1 pe-2">EBook</strong>
                     <FiBookOpen className="iconBooks "/> <strong className="ps-1 px-2">Book</strong>
@@ -21,6 +25,7 @@ const ItemDetail = ({item})=>{
                 <ItemCount 
                 stock = {item.stock}
                 initial = "1"
+                onAdd = {Handler}
                 />
             </div>
         </main>
