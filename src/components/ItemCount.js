@@ -19,7 +19,7 @@ const ItemCount = ({stock,initial, onAdd})=>{
                 <a  onClick={()=>{HandlerAdd()}}><FiPlus className="pdpBtns"/></a>
             </div>
             <div >
-                <button type="button" className="btn py-0 " onClick={()=>{onAdd(rate)}}>Add to cart!</button>
+                <button type="button" className="btn py-0 " disabled={rate==0 && true} onClick={()=>{onAdd(rate)}}>Add to cart!</button>
             </div>
         </div>
     );
