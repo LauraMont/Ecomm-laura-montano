@@ -58,6 +58,9 @@ main{
   .btn  {
     background-color: #dcd7c9;
     color: #2C3639;
+    height: fit-content;
+    padding-top: 2px;
+    padding-bottom: 2px;
   }
   .btn:hover,
   .circle:hover{
@@ -155,3 +158,17 @@ section{
   color: #dcd7c9;
 }
 
+/* ItemCart */
+.itemCartImg img{
+  width: 50%;
+}
+.ItemCartCard{
+  box-shadow: 0px 0px 0px 0px #dcd7c9;
+  transition: box-shadow 0.6s linear;
+  margin: 0.5em; /* Increased margin since the box-shado expands outside the element, like outline */
+}
+.ItemCartCard:hover { box-shadow: 0px 0px 0px 3px #dcd7c9; }
+.SummaryCart{
+  box-shadow: 0px 0px 0px 3px #dcd7c9;
+  height: fit-content;
+}

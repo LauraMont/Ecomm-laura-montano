@@ -10,7 +10,8 @@ const data = [
         "price":20,
         "stock":100,
         "img":"https://i.ibb.co/NmrW64r/D-NQ-NP-825469-MLA42620517705-072020-O.webp",
-        category : "RMCollection"
+        category : "RMCollection",
+        quantity : 0
     },
     {
         "id":2,
@@ -22,7 +23,8 @@ const data = [
         "price":25,
         "stock":90,
         "img":"https://i.ibb.co/N1pPkWb/D-NQ-NP-929007-MLA50296220770-062022-O.webp",
-        category : "RMCollection"
+        category : "RMCollection",
+        quantity : 0
     },
     {
         "id":3,
@@ -34,7 +36,8 @@ const data = [
         "price":15,
         "stock":120,
         "img":"https://i.ibb.co/sg7nfpV/D-NQ-NP-812258-MLA46099858299-052021-O.webp",
-        category : "RMCollection"
+        category : "RMCollection",
+        quantity : 0
     },
     {
         "id":4,
@@ -46,7 +49,8 @@ const data = [
         "price":25,
         "stock":100,
         "img":"https://i.ibb.co/vJh1dv5/D-NQ-NP-823857-MLA44983041831-022021-O.webp",
-        category : "RMCollection"
+        category : "RMCollection",
+        quantity : 0
     },
     {
         "id":5,
@@ -58,7 +62,8 @@ const data = [
         "price":30,
         "stock":150,
         "img":"https://i.ibb.co/ydPhnR1/e9862b0054f46d1ea55d82e87ea9321a.jpg",
-        category : "RMCollection"
+        category : "RMCollection",
+        quantity : 0
     },
     {
         "id":6,
@@ -70,7 +75,8 @@ const data = [
         "price":30,
         "stock":50,
         "img":"https://i.ibb.co/khtpdn1/Hochsensibel-copy.jpg",
-        category : "RMCollection"
+        category : "RMCollection",
+        quantity : 0
     },
     {
         "id":7,
@@ -82,7 +88,8 @@ const data = [
         "price":20,
         "stock":50,
         "img":"https://i.ibb.co/ysJKFfT/D-NQ-NP-845271-MLA50448662520-062022-O.webp",
-        category : "MoviesBasedInThem"
+        category : "MoviesBasedInThem",
+        quantity : 0
     },
     {
         "id":8,
@@ -94,7 +101,8 @@ const data = [
         "price":10,
         "stock":150,
         "img":"https://i.ibb.co/gTcHk2n/978031660510.gif",
-        category : "MoviesBasedInThem"
+        category : "MoviesBasedInThem",
+        quantity : 0
     },
     {
         "id":9,
@@ -106,7 +114,8 @@ const data = [
         "price":20,
         "stock":150,
         "img":"https://i.ibb.co/bBXzQpQ/D-NQ-NP-833456-MLA48577226368-122021-O.webp",
-        category : "MoviesBasedInThem"
+        category : "MoviesBasedInThem",
+        quantity : 0
     },
     {
         "id":10,
@@ -118,8 +127,8 @@ const data = [
         "price":30,
         "stock":150,
         "img":"https://i.ibb.co/SN1s81L/D-NQ-NP-952103-MLA49443458364-032022-O.webp",
-        category : "Classic"
-        
+        category : "Classic",
+        quantity : 0
     },
     {
         "id":11,
@@ -131,7 +140,8 @@ const data = [
         "price":30,
         "stock":150,
         "img":"https://i.ibb.co/87K78SN/D-NQ-NP-743652-MLA49903479289-052022-O.webp",
-        category : "Classic"
+        category : "Classic",
+        quantity : 0
     },
     {
         "id":12,
@@ -143,7 +153,8 @@ const data = [
         "price":10,
         "stock":80,
         "img":"https://i.ibb.co/HXqbL22/D-NQ-NP-699088-MLA46959568120-082021-O.webp",
-        category : "MoviesBasedInThem"
+        category : "MoviesBasedInThem",
+        quantity : 0
     },
     {
         "id":13,
@@ -155,7 +166,8 @@ const data = [
         "price":30,
         "stock":150,
         "img":"https://i.ibb.co/wzv7r9N/images-q-tbn-ANd9-Gc-Snpa-DQOQ7-Cf-QYte-Kp9gc-TK2y3ds9u-LQh-OZk2ev-Z8jb-ROZIt-D15-F5-Dg-YDg19i-GFag.jpg",
-        category : "MoviesBasedInThem"
+        category : "MoviesBasedInThem",
+        quantity : 0
     }
 ]
 const okay = true;
@@ -168,7 +180,7 @@ const customFetch=()=>{
             else{
                 reject()
             }
-        }, 2000)
+        }, 500)
     })
 }
 export default customFetch;

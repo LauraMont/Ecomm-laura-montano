@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import ItemCount from '../components/ItemCount';
 import customFetch from '../utils/customFetch';
 import ItemList from './ItemList'
 

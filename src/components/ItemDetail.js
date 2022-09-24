@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FiBook , FiBookOpen,FiClipboard ,FiTag , FiShoppingBag} from "react-icons/fi";
 import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount";
-
+import {CartContext} from "../containers/CartContext.js"
 
 const ItemDetail = ({item ,ebook ,fisicBook})=>{
     let ebookClass ,fisicBookClass ,ebookText , fisicBookText;
@@ -21,12 +21,13 @@ const ItemDetail = ({item ,ebook ,fisicBook})=>{
         fisicBookClass ="d-none";
         fisicBookText ="d-none";
     } 
-
+    const ctxItems = useContext(CartContext);
     const [Count,setCount]= useState(0);
     //PDP de un libro 
     const Handler = (count)=>{
         alert(`${count} products are added to your shopping cart`);
         setCount(count);
+        ctxItems.addItem(item, count);
     }
     return(
         <main className="row p-5 m-0">

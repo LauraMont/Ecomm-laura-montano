@@ -2,10 +2,12 @@ import {FiPlus, FiMinus} from "react-icons/fi";
 import { useState } from "react";
 
 const ItemCount = ({stock,initial, onAdd})=>{
-    const [rate,setRate]= useState(parseInt(initial));//hook
+    const [rate,setRate]= useState(parseInt(initial));
+    //Incrementa la cantidad del producto en 1
     const HandlerAdd = ()=> {
         rate<stock && setRate(rate +1);
     }
+    //Decrementa la cantidad del producto en 1
     const HandlerRest = ()=> {
         rate>initial && setRate(rate -1);
         
