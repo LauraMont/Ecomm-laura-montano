@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import {CartContext} from "./CartContext";
 import ItemCart from "../components/ItemCart";
 import { Link } from "react-router-dom";
@@ -6,6 +6,12 @@ import { Link } from "react-router-dom";
 const Cart = ()=>{
     //Se obtiene el contenido de la variabe global
     const ctxItems = useContext(CartContext);
+    const [totalCost , setTotalCost] = useState(0)
+    const [isEmpty , setIsEmpty] = useState(true)
+    useEffect(()=>{ 
+        setTotalCost(ctxItems.CostTotal)
+        setIsEmpty(ctxItems.ItemsTotal==0)
+    }, [ctxItems])
     return(
         <main>
             <h1 className="text-center mono-text py-3 ">You are in the Shopping Cart</h1>
@@ -20,14 +26,19 @@ const Cart = ()=>{
                 </div>
                 <div className="col-8 ">
                     {
-                        //Se mapea el contenido y se imprime en la lista
-                        ctxItems.cartList.map(item=> <ItemCart product={item} key={item.id}/>)
+                        isEmpty?
+                        <h2 className="text-center mono-text">Your Shopping Cart is Empty</h2>
+                        :ctxItems.cartList.map(item=> <ItemCart product={item} key={item.id}/>)
+                        
                     }
                 </div>
                 <div className="col-3 mono-text SummaryCart m-4 row">
                     <h3 className="text-center mono-text py-3">ORDER SUMMARY</h3>
                     <p className="col-6">SubTotal:<br/>Taxes   :<br/>Discount:<br/><strong>Total:</strong></p>
-                    <p className="col-6">${ctxItems.totals}<br/>${ctxItems.totals*0.05 }<br/>${ctxItems.totals*0.05 }<br/><strong>${ctxItems.totals}</strong> </p>
+                    <p className="col-6">${totalCost}<br/>${totalCost*0.05 }<br/>$-{totalCost*0.05 }<br/><strong>${totalCost}</strong> </p>
+                    <div className="d-flex justify-content-center pb-3">
+                        <button type="button" className="btn py-0 ">Checkout</button>
+                    </div>
                 </div>
             </section>
             

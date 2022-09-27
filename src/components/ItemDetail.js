@@ -5,22 +5,6 @@ import ItemCount from "./ItemCount";
 import {CartContext} from "../containers/CartContext.js"
 
 const ItemDetail = ({item ,ebook ,fisicBook})=>{
-    let ebookClass ,fisicBookClass ,ebookText , fisicBookText;
-    //Se definen si los iconos de ebook o book aparecen segun disponibilidad del libro (ebook:version digital , book:version fisica)
-    if(ebook){
-        ebookClass = "iconBooks";
-        ebookText = "ps-1 px-2";
-    }else{
-        ebookClass ="d-none";
-        ebookText ="d-none";
-    } 
-    if(fisicBook){
-        fisicBookClass = "iconBooks";
-        fisicBookText = "ps-1 pe-2";
-    }else{
-        fisicBookClass ="d-none";
-        fisicBookText ="d-none";
-    } 
     const ctxItems = useContext(CartContext);
     const [Count,setCount]= useState(0);
     //PDP de un libro 
@@ -38,9 +22,9 @@ const ItemDetail = ({item ,ebook ,fisicBook})=>{
                 <h2 className="mono-text"><strong>{item.title}</strong></h2>
                 <p className="mono-text">{item.author}</p>
                 <p className="mono-text fs-6">{item.description}</p>
-                <div className=" iconsPDP mt-5 p-1 d-flex align-items-center">
-                    <FiBook className={fisicBookClass}/> <strong className={fisicBookText}>EBook</strong>
-                    <FiBookOpen className={ebookClass}/> <strong className={ebookText}>Book</strong>
+                <div className=" iconsPDP mt-5 mb-2 p-1 d-flex align-items-center">
+                    <FiBook className={fisicBook ==true? 'iconBooks':'d-none'}/> <strong className={fisicBook ==true? 'ps-1 px-2':'d-none'}>EBook</strong>
+                    <FiBookOpen className={ebook ==true? 'iconBooks':'d-none' }/> <strong className={ebook ==true? 'iconBooks':'d-none'}>Book</strong>
                     <FiTag className="iconBooks "/> <strong className="ps-1 pe-2">${item.price}</strong>
                     <FiShoppingBag className="iconBooks "/> <strong className="ps-1 pe-2">{item.stock}</strong>
                 </div>
@@ -51,7 +35,7 @@ const ItemDetail = ({item ,ebook ,fisicBook})=>{
                         initial = "0"
                         onAdd = {Handler}
                     />:
-                    <Link to='/cart'>
+                    <Link className="p-4" to='/cart'>
                         <button type="button" className="btn py-0 " >Checkout</button>
                     </Link>
                 }

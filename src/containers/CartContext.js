@@ -4,7 +4,6 @@ export const CartContext = createContext();
 
 const CartContextProvider = ({children})=>{
     const [cartList, setCartList] = useState([])
-    const [totals , settotals] = useState(0)
     //Funciones globales
     const addItem = (item, quantity)=>{ // agregar cierta cantidad de un ítem al carrito
         if(isInCart(item.id)){
@@ -29,35 +28,46 @@ const CartContextProvider = ({children})=>{
                     key:element.id
                 }
             ))
-            console.log(array)
             setCartList(array)
         }else{  
             item.quantity=quantity;
             setCartList([...cartList,item]);
         }
-        costTotal([...cartList,item])
     }
     const removeItem = (itemId) =>{ // Remover un item del cart por usando su id
         setCartList(cartList.filter(item=> item.id !== itemId));
-        costTotal(cartList.filter(item=> item.id !== itemId))
     }
-    const clear = ()=>{ setCartList([])} // Remover todos los items
+    const clear = ()=>{ 
+        setCartList([])
+    } // Remover todos los items
     const isInCart = (id) =>{
         return cartList.filter(item=> item.id == parseInt(id)).length > 0
     } //true|false
-    const costTotal = (list)=>{
-        console.log(list)
-        if(list.length>0){
-            let costos = list.map((item)=>(
+    
+    const CostTotal = ()=>{
+        let total = 0;
+        if(cartList.length>0){
+            let costos = cartList.map((item)=>(
                 item.price*item.quantity
             ))
-            settotals( costos.reduce((a, b)=>{ return a + b}))
-        }else{
-            settotals(0)
+            total=costos.reduce((a, b)=>{ return a + b})
         }
+        return total;
+    }
+    const ItemsTotal = ()=>{
+        let items = 0;
+        if(cartList.length >0 ){
+            items = cartList.map((item)=>(
+                item.quantity
+            ))
+            items.length==1 ? items = cartList[0].quantity
+            :items = items.reduce((a, b)=>{ return a + b})
+        }
+        console.log(`CX :${items}`)
+        return items;
     }
     return(
-        <CartContext.Provider value={{cartList,totals, addItem, removeItem, clear, isInCart ,costTotal}}>
+        <CartContext.Provider value={{cartList, addItem, removeItem, clear, isInCart,CostTotal ,ItemsTotal}}>
             {children}
         </CartContext.Provider>
     )
