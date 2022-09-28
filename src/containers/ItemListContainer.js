@@ -1,23 +1,17 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import customFetch from '../utils/customFetch';
+import { db } from '../utils/fireBaseConfig';
 import ItemList from './ItemList'
+import { collection, getDocs } from "firebase/firestore";
 
 const ItemListContainer= ()=>{
     const [data,setData]=useState([]);
     const {id} = useParams();
-    useEffect(()=>{ 
-        if(id){
-            //muestra los productos de la categoria id
-            customFetch()
-                .then(result=> setData(result.filter(item=> item.category == id)))
-                .catch(err=> console.log(err))
-        }else{ //id=undefined
-            //muestra todos los productos
-            customFetch()
-                .then(result=> setData(result))
-                .catch(err=> console.log(err))
-        }
+    useEffect(async()=>{ 
+        const querySnapshot = await getDocs(collection(db, "products"));
+        querySnapshot.docs.forEach((doc) => {
+            console.log(`${doc.id} => ${doc.data()}`);
+        });
     }, [id])
     return(
         <main>

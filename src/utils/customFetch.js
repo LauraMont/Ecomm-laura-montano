@@ -127,7 +127,7 @@ const data = [
         "price":30,
         "stock":150,
         "img":"https://i.ibb.co/SN1s81L/D-NQ-NP-952103-MLA49443458364-032022-O.webp",
-        category : "Classic",
+        category : "Novels",
         quantity : 0
     },
     {
