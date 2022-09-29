@@ -3,7 +3,6 @@ import { useContext } from "react";
 
 const ItemCart = ({product})=>{
     const ctxItems = useContext(CartContext);
-
     return(
             <section className="row ItemCartCard mx-5 my-4 p-2">
                 <div className="col-4 itemCartImg d-flex justify-content-center">

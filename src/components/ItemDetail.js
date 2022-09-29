@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { FiBook , FiBookOpen,FiClipboard ,FiTag , FiShoppingBag} from "react-icons/fi";
+import { FiBook , FiBookOpen ,FiTag , FiShoppingBag} from "react-icons/fi";
 import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount";
 import {CartContext} from "../containers/CartContext.js"

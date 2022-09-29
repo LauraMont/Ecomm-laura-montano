@@ -63,7 +63,6 @@ const CartContextProvider = ({children})=>{
             items.length==1 ? items = cartList[0].quantity
             :items = items.reduce((a, b)=>{ return a + b})
         }
-        console.log(`CX :${items}`)
         return items;
     }
     return(
