@@ -11,7 +11,7 @@ Mira **Deployment** para conocer como desplegar el proyecto.
 
 ### Pre-requisitos 📋
 
-_NODE JS, npm_
+_NODE JS, npm ,VSCODE (u otro editor)_
 
 ```
 Da un ejemplo
@@ -64,28 +64,18 @@ _Agrega notas adicionales sobre como hacer deploy_
 
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
+_Se utilizaron las siguientes recursos_
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
+* [ReactJS](https://es.reactjs.org/docs/getting-started.html) - El framework web usado
+* [SweetAlert](https://sweetalert2.github.io/) - Libreria para modals
+* [Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/) - Libreria para estilos
+* [ReactRouterDom](https://www.npmjs.com/package/react-router-dom) - Libreria para rutas
+* [FireBase](https://firebase.google.com/docs/) - Almacenamiento de datos
 
-## Contribuyendo 🖇️
+## Autor ✒️
 
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
-
-## Versionado 📌
-
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
-
-## Autores ✒️
-
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
-
-* **Andrés Villanueva** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
-* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
+* **Laura Montaño** - *Trabajo Inicial* - [LauraMont](https://github.com/LauraMont)
+* **Laura Montaño** - *Documentacion* - [LauraMont](https://github.com/LauraMont)
 
 ## Licencia 📄
 
@@ -93,4 +83,4 @@ Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md
 
 ## Expresiones de Gratitud 🎁
 
-*Basado en el template de [Villanuevand](https://github.com/Villanuevand) 
+* Basado en el template de [Villanuevand](https://github.com/Villanuevand) 
