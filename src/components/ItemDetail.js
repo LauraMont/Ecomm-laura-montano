@@ -9,7 +9,6 @@ const ItemDetail = ({item ,ebook ,fisicBook})=>{
     const [Count,setCount]= useState(0);
     //PDP de un libro 
     const Handler = (count)=>{
-        alert(`${count} products are added to your shopping cart`);
         setCount(count);
         ctxItems.addItem(item, count);
     }

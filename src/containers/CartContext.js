@@ -1,5 +1,5 @@
 import React, {createContext, useState } from "react"
-
+import {Toasty} from "../utils/Notifications"
 export const CartContext = createContext();
 
 const CartContextProvider = ({children})=>{
@@ -33,12 +33,16 @@ const CartContextProvider = ({children})=>{
             item.quantity=quantity;
             setCartList([...cartList,item]);
         }
+        Toasty("success",`Se agrego ${item.title} (${item.quantity})`)  
     }
     const removeItem = (itemId) =>{ // Remover un item del cart por usando su id
+        const title = "se eliminó   de la lista de compra";
         setCartList(cartList.filter(item=> item.id !== itemId));
+        Toasty("success",title)  
     }
     const clear = ()=>{ 
         setCartList([])
+        Toasty("success","se borraron todos los items de la lista de compras")
     } // Remover todos los items
     const isInCart = (id) =>{
         return cartList.filter(item=> item.id == parseInt(id)).length > 0

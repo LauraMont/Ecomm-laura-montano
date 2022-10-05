@@ -11,7 +11,7 @@ const CartWidget = ()=>{
     return(
         <div className="d-flex">
             <FiShoppingCart className="react-icons"/>
-            <div className="circle mx-2">
+            <div className={total==0? 'd-none':"circle mx-2"}>
                 <p id="circle-content">{total}</p>
             </div>
         </div>

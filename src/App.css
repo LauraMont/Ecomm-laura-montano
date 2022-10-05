@@ -172,3 +172,7 @@ section{
   box-shadow: 0px 0px 0px 3px #dcd7c9;
   height: fit-content;
 }
+/* Footer */
+footer{
+  background-color: #dcd7c9;
+}

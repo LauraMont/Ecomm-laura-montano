@@ -14,16 +14,16 @@ const NavBar = ()=>{
                 <div className="collapse navbar-collapse justify-content-around" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <Link className="nav-link active" to='/category/RMCollection'>RM Collection</Link>
+                            <Link className="nav-link active" to='/category/RM_Collection'>RM Collection</Link>
                         </li>
                         <li className="nav-item">
-                        <Link className="nav-link active" to='/category/Novel'>Novels</Link>
+                        <Link className="nav-link active" to='/category/Novels'>Novels</Link>
                         </li>
                         <li className="nav-item">
                         <Link className="nav-link active" to='/category/Classic'>Clasics</Link>
                         </li>
                         <li className="nav-item">
-                        <Link className="nav-link active" to='/category/MoviesBasedInThem'>Movies based in them</Link>
+                        <Link className="nav-link active" to='/category/Movies_Based_In_Them'>Movies based in them</Link>
                         </li>
                     </ul>
                     <div>
