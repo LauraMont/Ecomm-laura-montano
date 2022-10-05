@@ -1,21 +1,35 @@
 # Paradise Books
 
-_Este proyecto es un e-commerce de una tienda de libros. Tiene algunas de las funcionalidades basicas que debe tener uno_
+_Este proyecto es un e-commerce de una tienda de libros.Se desarrollo con React con un diseño de SPA_ 
+_Tiene algunas de las funcionalidades basicas como:_
+
+* Lista de productos con categorias
+* Datos de productos almacenados en firebase
+* Control de stock por firebase
+* Detalles de los productos
+* Agregar o eliminar producto del carrito
+* Calculo de total en Summary
+* Checkout con orden de compra almacenada en firebase
+
+## Vista previa 🚀
+
+
 
 ## Comenzando 🚀
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
+_Clonar repositorio:_
 
-Mira **Deployment** para conocer como desplegar el proyecto.
-
+```
+git clone https://github.com/LauraMont/Ecomm-laura-montano.git
+```
 
 ### Pre-requisitos 📋
 
-_NODE JS, npm ,VSCODE (u otro editor)_
+_Debe contar con los siguientes recursos :_
 
-```
-Da un ejemplo
-```
+* NODE JS 
+* npm
+* Visual Studio Code (u otro editor)
 
 ### Instalación 🔧
 
@@ -38,29 +52,6 @@ _Ejecutar proyecto_
 npm start
 ```
 _Nota:este ultimo paso es el unico que debe ejecutarse para las siguientes ejecuciones del proyecto_
-## Ejecutando las pruebas ⚙️
-
-_Explica como ejecutar las pruebas automatizadas para este sistema_
-
-### Analice las pruebas end-to-end 🔩
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
-
-### Y las pruebas de estilo de codificación ⌨️
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
-
-## Despliegue 📦
-
-_Agrega notas adicionales sobre como hacer deploy_
 
 ## Construido con 🛠️
 
@@ -74,12 +65,7 @@ _Se utilizaron las siguientes recursos_
 
 ## Autor ✒️
 
-* **Laura Montaño** - *Trabajo Inicial* - [LauraMont](https://github.com/LauraMont)
-* **Laura Montaño** - *Documentacion* - [LauraMont](https://github.com/LauraMont)
-
-## Licencia 📄
-
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
+* **Laura Montaño** - [LauraMont](https://github.com/LauraMont)
 
 ## Expresiones de Gratitud 🎁
 
