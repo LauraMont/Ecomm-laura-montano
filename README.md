@@ -1,6 +1,7 @@
-# Paradise Books
+# 📚 Paradise Books 📚
 
-_Este proyecto es un e-commerce de una tienda de libros.Se desarrollo con React con un diseño de SPA_ 
+_Este proyecto es un e-commerce de una tienda de libros.Se desarrollo con React con un diseño de SPA._ 
+
 _Tiene algunas de las funcionalidades basicas como:_
 
 * Lista de productos con categorias
