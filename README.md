@@ -13,7 +13,11 @@ _Tiene algunas de las funcionalidades basicas como:_
 
 ## Vista previa 🚀
 
+![Home](https://user-images.githubusercontent.com/69987163/194058856-05079884-a8e9-4da9-b423-fa95423e3fbf.png)
 
+![PDP](https://user-images.githubusercontent.com/69987163/194058874-ebefded9-412d-4532-a008-be9c85398aed.png)
+
+![SC](https://user-images.githubusercontent.com/69987163/194058897-55db7c7d-69c4-4810-a1a5-cdaaa8f9f674.png)
 
 ## Comenzando 🚀
 
